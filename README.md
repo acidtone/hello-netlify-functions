@@ -26,4 +26,41 @@ Goal: Have Netlify recognize a serverless function in their admin panel.
       directory = "functions"
     ```
 
-- 
+- Does npm need to be initialized for netlify functions to work? Answer: nope!
+
+## Walk-through
+Success: The [hello-netlify-functions](https://github.com/acidtone/hello-netlify-functions) repo is the minimum you need to publish a Netlify function.
+    - a [`netlify.toml`](https://github.com/acidtone/hello-netlify-functions/blob/main/netlify.toml) file is needed to configure the location of the functions directory
+    - Requests to the functions are routed according to this pattern:
+
+        ```
+        https://[site-name].netlify.app/.netlify/functions/[function-name]
+        ```
+
+        Example:
+        
+        ```
+        https://sait-wbdv-netlify-functions.netlify.app/.netlify/functions/hello
+        ```
+
+Next Steps:
+- Get this example to work locally with Netlify Dev:
+
+    ```
+    https://locahost:3000/.netlify/functions/hello
+    ```
+
+- Figure out how to add wildcard redirects for the endpoint so that:
+
+    ```
+    https://sait-wbdv-netlify-functions.netlify.app/.netlify/functions/hello
+    ```
+
+    maps to 
+
+    ```
+    https://sait-wbdv-netlify-functions.netlify.app/api/hello
+    ```
+
+## Optimize
+- Nothing needed.
