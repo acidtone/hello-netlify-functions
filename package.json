@@ -1,0 +1,12 @@
+{
+  "name": "hello-netlify-functions",
+  "version": "1.0.0",
+  "description": "Goal: Have Netlify recognize a serverless function in their admin panel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tony Grimes",
+  "license": "MIT"
+}
