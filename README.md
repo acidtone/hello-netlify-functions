@@ -25,3 +25,5 @@ Goal: Have Netlify recognize a serverless function in their admin panel.
     [functions]
       directory = "functions"
     ```
+
+- 
